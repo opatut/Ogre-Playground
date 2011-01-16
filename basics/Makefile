@@ -7,6 +7,9 @@ bake:
 run:
 	cd bin; ./basics
 
+gdb:
+	cd bin; gdb basics
+
 #docs:
 #	doxygen
 

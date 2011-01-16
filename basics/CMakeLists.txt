@@ -14,6 +14,7 @@ find_package(OGRE REQUIRED)
 find_package(Bullet REQUIRED)
 find_package(MyGUI REQUIRED)
 find_package(MyGUI_PLATFORM REQUIRED)
+find_package(Lua51 REQUIRED)
 find_package(Boost COMPONENTS filesystem system python date_time REQUIRED)
 
 add_definitions(-Wall -Wextra -g -pedantic -fPIC -std=c++0x)
@@ -31,6 +32,7 @@ include_directories(
     ${MYGUI_PLATFORM_INCLUDE_DIR}
     ${BULLET_INCLUDE_DIRS}
     ${OIS_INCLUDE_DIRS}
+    ${LUA_INCLUDE_DIRS}
     )
 
 aux_source_directory(src/ sources)
@@ -47,5 +49,6 @@ target_link_libraries(${PROJECT_NAME}
     ${MYGUI_PLATFORM_LIBRARIES}
     ${BULLET_LIBRARIES}
     ${OIS_LIBRARIES}
+    ${LUA_LIBRARIES}
     )
 
