@@ -6,6 +6,8 @@
 class IComponent {
 public:
 	IComponent();
+	virtual ~IComponent() = 0;
+
 	void Initialize();
 	void Update();
 
